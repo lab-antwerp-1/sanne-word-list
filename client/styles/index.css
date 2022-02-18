@@ -11,10 +11,8 @@
   );
   background-size: auto auto;
   background-clip: border-box;
-  background-size: 200% auto;
   color: #fff;
-  background-clip: text;
-
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -29,7 +27,6 @@
 }
 
 .stage {
-  box-sizing: border-box;
   position: absolute;
   left: 0;
   top: 0;
@@ -47,7 +44,6 @@
   font-size: 20px;
   height: 60px;
   border: none;
-  outline: none;
   background: #c38b8b;
   color: #fff;
   cursor: pointer;

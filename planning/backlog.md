@@ -32,10 +32,14 @@ C-->D;
 ## Should-Haves
 
 - An intro to explain what this function can do
-- A
-
-> these will complete the user experience, but are not necessary
+- A moving fun title header
+- More color
 
 ## Could-Haves
 
-> would be really cool ... if there's time
+- Would be really cool if the function could have different list settings:
+  - Shopping List
+  - To do list
+  - Wish list
+  - Guest list
+  - e.t.c

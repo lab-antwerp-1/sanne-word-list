@@ -54,6 +54,7 @@
         },
         data = { words: [], sort: 'oldest' },
         handleInputWord = (a) => {
+          //debugger;
           if ('button' !== a.target.type) return;
           const b = a.target.form.text.value,
             c = a.target.value,
@@ -70,7 +71,9 @@
             f = e.reduce((a, b) => `${a}<li>${b}</li>`, '');
           document.getElementById('list-container').innerHTML = `<ul>${f}</ul>`;
         },
+
         handleSortWords = (a) => {
+          debugger
           const b = a.target.value;
           data.sort = b;
           const c = sortStrings(data.words, data.sort),

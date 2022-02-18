@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import { data } from '../../data.js';
+// eslint-disable-next-line no-unused-vars
 import { sortStrings } from '../logic/sort-strings.js';
 import { renderList } from '../components/render-list.js';
 
@@ -13,6 +15,7 @@ export const sortWords = (event) => {
   // debugger;
 
   /* -- gather user input from DOM -- */
+  // eslint-disable-next-line no-unused-vars
   const howToSort = event.target.value;
 
   /* -- use the input and data to create a new sorted list --
@@ -24,6 +27,8 @@ export const sortWords = (event) => {
   // ... write some code ...
 
   /* -- render new words -- */
+  // eslint-disable-next-line spellcheck/spell-checker
+  // eslint-disable-next-line no-undef
   const newList = renderList(sorted);
 
   const listContainer = document.getElementById('list-container');

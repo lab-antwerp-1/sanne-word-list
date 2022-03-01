@@ -18,9 +18,13 @@ export const inputWord = (event) => {
     return;
   }
 
+  // debugger;
   /* -- gather user input from DOM -- */
   const text = event.target.form.text.value;
   const action = event.target.value;
+
+  // if text is empty and add button is clicked action = warning
+  // If input is a number and add button clicked action = warning
 
   /* -- use the input and data to implement the user story --
 
@@ -40,12 +44,12 @@ export const inputWord = (event) => {
   */
 
   const warnings = document.getElementById('warnings');
-  warnings.innerText = '';
+  warnings.innerText = 'Hello';
 
-  if (action === 'add') {
-    // ... write some code ...
+  if (action === 'add' && text === '') {
+    if (!isWord(text)) warnings.innerText = `"${text}" is not a word`;
   } else if (action === 'remove') {
-    // ... write some code ...
+    warnings.innerText = `"${text}" is not on the list`;
   }
 
   /* -- render new words -- */

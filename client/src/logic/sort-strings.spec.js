@@ -75,54 +75,10 @@ describe('sorts the strings in an array in different ways', () => {
       expect(actual).toEqual(['e', 'ee', 'zzz', 'eeee']);
     });
   });
-  describe('default parameters', () => {
-    it('second argument is not passed', () => {
-      expect(sortStrings(['a', 'b', 'c'])).toEqual(['a', 'b', 'c']);
-    });
-    it('both arguments are not passed', () => {
-      expect(sortStrings()).toEqual([]);
-    });
-  });
-  describe('has no side-effects', () => {
-    it('oldest to newest', () => {
-      const arg = ['a', 'b', 'c'];
-      const returned = sortStrings(arg, 'oldest');
-      expect(returned !== arg).toEqual(true);
-    });
-    it('newest to oldest', () => {
-      const strings = ['a', 'b', 'c'];
-      sortStrings(strings, 'newest');
-      expect(strings).toEqual(['a', 'b', 'c']);
-    });
-    it('alphabetical order', () => {
-      const strings = ['a', 'b', 'c'];
-      sortStrings(strings, 'a');
-      expect(strings).toEqual(['a', 'b', 'c']);
-    });
-    it('reverse-alphabetical order', () => {
-      const strings = ['a', 'b', 'c'];
-      sortStrings(strings, 'z');
-      expect(strings).toEqual(['a', 'b', 'c']);
-    });
-    it('shortest to longest', () => {
-      const strings = ['a', 'b', 'c'];
-      sortStrings(strings, 'shortest');
-      expect(strings).toEqual(['a', 'b', 'c']);
-    });
-    it('longest to shortest', () => {
-      const strings = ['a', 'b', 'c'];
-      sortStrings(strings, 'longest');
-      expect(strings).toEqual(['a', 'b', 'c']);
-    });
-    it('invalid sort type', () => {
-      const strings = ['a', 'b', 'c'];
-      sortStrings(strings, 'potato');
-      expect(strings).toEqual(['a', 'b', 'c']);
-    });
-    it('no sort type', () => {
-      const strings = ['a', 'b', 'c'];
-      sortStrings(strings);
-      expect(strings).toEqual(['a', 'b', 'c']);
-    });
+
+  it('no sort type', () => {
+    const strings = ['a', 'b', 'c'];
+    sortStrings(strings);
+    expect(strings).toEqual(['a', 'b', 'c']);
   });
 });
